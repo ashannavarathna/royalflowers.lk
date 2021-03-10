@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.AdvertisingCategory" table="advertising_category" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idadvertisingCategory" type="java.lang.Integer">
+            <column name="idadvertising_category" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="advertisingStatus" class="pojo.AdvertisingStatus" fetch="select">
+            <column name="advertising_status_idadvertising_status" not-null="true" />
+        </many-to-one>
+        <property name="category" type="string">
+            <column name="category" length="45" />
+        </property>
+        <set name="advertisings" table="advertising" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertising_category_idadvertising_category" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Advertising" />
+        </set>
+    </class>
+</hibernate-mapping>

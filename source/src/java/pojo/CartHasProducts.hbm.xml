@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.CartHasProducts" table="cart_has_products" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idcartHasProducts" type="java.lang.Integer">
+            <column name="idcart_has_products" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cart" class="pojo.Cart" fetch="select">
+            <column name="cart_idcart" not-null="true" />
+        </many-to-one>
+        <many-to-one name="product" class="pojo.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <property name="qty" type="java.lang.Integer">
+            <column name="qty" />
+        </property>
+        <property name="isPurchased" type="java.lang.Integer">
+            <column name="is_purchased" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.DeliveryPlan" table="delivery_plan" catalog="royal_flowers" optimistic-lock="version">
+        <id name="iddeliveryPlan" type="java.lang.Integer">
+            <column name="iddelivery_plan" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="k10" type="java.lang.Double">
+            <column name="k_10" precision="22" scale="0" />
+        </property>
+        <property name="k50" type="java.lang.Double">
+            <column name="k_50" precision="22" scale="0" />
+        </property>
+        <property name="k100" type="java.lang.Double">
+            <column name="k_100" precision="22" scale="0" />
+        </property>
+        <property name="k100up" type="java.lang.Double">
+            <column name="k_100up" precision="22" scale="0" />
+        </property>
+        <property name="deliveryPeriod" type="java.lang.Integer">
+            <column name="delivery_period" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <set name="deliveries" table="delivery" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="delivery_plan_iddelivery_plan" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Delivery" />
+        </set>
+    </class>
+</hibernate-mapping>

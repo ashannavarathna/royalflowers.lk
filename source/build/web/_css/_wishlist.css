@@ -1,0 +1,137 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 15, 2015, 10:48:18 AM
+    Author     : Ashna Nawarathna
+*/
+
+
+/* cart page */
+
+.shopping_cart_wrapper{
+    width: 1000px;
+    /*border: 1px solid #CCC;*/
+    background-color: #FFF;
+    /*height: 750px;*/
+    padding: 10px 5px;
+    float: left;
+    margin-bottom: 20px;
+    box-shadow: 0 0 7px -3px #777;
+}
+.cart_table{
+    /*border: 1px solid #dff0d8;*/
+    width: 990px;
+    margin: 0 auto;
+    
+
+}
+.cart_table table{
+    width: 990px;
+}
+.cart_table .t-head tr{  
+    color: #FFF;
+    display: block;
+
+}
+.cart_table .t-head td{
+    /*background-color: #419641;*/
+    background-color: #62c462;
+    padding:  10px 5px 10px 5px;
+}
+.cart_table .t-cnt tr{
+    display: block;
+}
+.cart_table .t-cnt td{
+    padding: 5px;
+}
+.cart_table .h-hash{
+    width: 142px;
+    text-align: center;
+}
+.cart_table .h-desc{
+    width: 420px;
+}
+.cart_table .h-prc{
+    width: 100px;
+}
+.cart_table .h-qty{
+    width: 50px;
+}
+.cart_table .h-tot{
+    width: 100px;
+}
+.cart_table .h-mng{
+    width: 100px;
+}
+/*end head*/
+
+.cart_table .cont{
+    color: #333;
+    border-bottom: 1px solid #dff0d8;
+}
+.cart_table .c-img{
+    width: 142px;
+}
+.cart_table .c-img img{
+    width: 90px;
+    height: 70px;
+    margin-left: 25px;
+
+}
+.cart_table .c-desc{
+    width: 420px;
+    font-size: 14px;
+}
+.cart_table .c-prc{
+    width: 100px;
+    padding: 0 5px 0 0;
+}
+.cart_table .c-qty{
+    width: 50px;
+}
+.cart_table .c-qty input{
+    width: 30px;
+    text-align: right;
+    float: right;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    border:1px solid #CCC;
+}
+.cart_table .c-tot{
+    width: 100px;
+    
+}
+.cart_table .cnt{
+    text-align: right;
+}
+.cart_table .c-mng{
+    width: 100px;
+    font-size: 12px;
+
+}
+.cart_table .c-mng .spn{
+    display: block;
+    padding: 8px 0px;
+    border: 1px solid #CCC;
+    text-align: center;
+    border-radius: 3px;
+    cursor: default;
+}
+.cart_table .c-mng .spn:hover{
+    background-color: #F4F4EE;
+    box-shadow: 0 0 10px -3px #F4F4EE;
+}
+.cart_table table tr.row-even td{
+    background-color: #FFF;
+    color: #333;
+}
+.cart_table table tr.row-odd td{
+    background-color: #FFF;
+    /*background-color:#dff0d8;*/
+    color: #333;
+}
+/* end of cart */

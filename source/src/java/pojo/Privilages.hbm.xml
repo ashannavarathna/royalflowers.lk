@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Privilages" table="privilages" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idprivilages" type="java.lang.Integer">
+            <column name="idprivilages" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="interfaces" class="pojo.Interfaces" fetch="select">
+            <column name="interfaces_idinterfaces" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userType" class="pojo.UserType" fetch="select">
+            <column name="user_type_iduser_type" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

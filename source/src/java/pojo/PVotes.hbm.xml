@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.PVotes" table="p_votes" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idpVotes" type="java.lang.Integer">
+            <column name="idp_votes" />
+            <generator class="identity" />
+        </id>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <set name="productRatings" table="product_rating" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="p_votes_idp_votes" not-null="true" />
+            </key>
+            <one-to-many class="pojo.ProductRating" />
+        </set>
+    </class>
+</hibernate-mapping>

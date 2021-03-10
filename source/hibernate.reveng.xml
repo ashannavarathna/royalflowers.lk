@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="royal_flowers"/>
+  <table-filter match-name="product_details"/>
+  <table-filter match-name="user_type"/>
+  <table-filter match-name="product_color"/>
+  <table-filter match-name="privilages"/>
+  <table-filter match-name="user_state"/>
+  <table-filter match-name="email_code"/>
+  <table-filter match-name="cart"/>
+  <table-filter match-name="cart_has_products"/>
+  <table-filter match-name="product"/>
+  <table-filter match-name="sub_category"/>
+  <table-filter match-name="interfaces"/>
+  <table-filter match-name="user_login"/>
+  <table-filter match-name="product_type"/>
+  <table-filter match-name="brand"/>
+  <table-filter match-name="delivery"/>
+  <table-filter match-name="login_session"/>
+  <table-filter match-name="catagory"/>
+  <table-filter match-name="user"/>
+  <table-filter match-name="invoice"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.AdvertisingLocation" table="advertising_location" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idadvertisingLocation" type="java.lang.Integer">
+            <column name="idadvertising_location" />
+            <generator class="identity" />
+        </id>
+        <property name="imgSize" type="string">
+            <column name="img_size" length="45" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="45" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+        <property name="discount" type="java.lang.Double">
+            <column name="discount" precision="22" scale="0" />
+        </property>
+        <set name="advertisings" table="advertising" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertising_location_idadvertising_location" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Advertising" />
+        </set>
+    </class>
+</hibernate-mapping>

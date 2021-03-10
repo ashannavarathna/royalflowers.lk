@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Catagory" table="catagory" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idcatagory" type="java.lang.Integer">
+            <column name="idcatagory" />
+            <generator class="identity" />
+        </id>
+        <property name="catagory" type="string">
+            <column name="catagory" />
+        </property>
+        <set name="subCategories" table="sub_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="catagory_idcatagory" not-null="true" />
+            </key>
+            <one-to-many class="pojo.SubCategory" />
+        </set>
+    </class>
+</hibernate-mapping>

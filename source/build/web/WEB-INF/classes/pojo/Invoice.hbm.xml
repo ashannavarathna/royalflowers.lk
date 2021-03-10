@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Invoice" table="invoice" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idinvoice" type="java.lang.Integer">
+            <column name="idinvoice" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cart" class="pojo.Cart" fetch="select">
+            <column name="cart_idcart" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojo.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="invoiceNum" type="string">
+            <column name="invoice_num" length="45" />
+        </property>
+        <property name="timeDate" type="timestamp">
+            <column name="Time_date" length="19" />
+        </property>
+        <set name="deliveries" table="delivery" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="invoice_idinvoice" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Delivery" />
+        </set>
+    </class>
+</hibernate-mapping>

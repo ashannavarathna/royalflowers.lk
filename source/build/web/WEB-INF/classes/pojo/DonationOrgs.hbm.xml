@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.DonationOrgs" table="donation_orgs" catalog="royal_flowers" optimistic-lock="version">
+        <id name="iddonationOrgs" type="java.lang.Integer">
+            <column name="iddonation_orgs" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="wesiteUrl" type="string">
+            <column name="wesite_url" length="45" />
+        </property>
+        <property name="desciption" type="string">
+            <column name="desciption" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+        <property name="accNum" type="string">
+            <column name="acc_num" length="45" />
+        </property>
+        <set name="donationses" table="donations" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="donation_orgs_iddonation_orgs" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Donations" />
+        </set>
+    </class>
+</hibernate-mapping>

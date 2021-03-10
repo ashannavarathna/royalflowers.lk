@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 12, 2015, 10:04:45 PM
+    Author     : Ashna Nawarathna
+*/
+body{
+    background-color: #EEE;
+    font-family: sans-serif;
+}
+.main-wrapper{
+    margin:  0 auto;
+    border: 1px solid #CCC;
+    width: 313px;
+    padding: 10px;
+    background-color: #f1eef1;
+    margin-top: 200px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+.top_title{
+    text-align: center;
+    padding: 5px;
+}
+
+form input{
+    display: block;
+    margin-bottom: 10px;
+  border: 1px solid #999;
+}
+form input[type=text],form input[type=password]{
+    width: 300px;
+    padding: 8px 5px;
+}
+
+form input[type=submit]{
+    padding: 7px 50px;
+    
+    background: -webkit-linear-gradient(#F2F2F2, #E3E3E3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F2F2F2, #E3E3E3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F2F2F2, #E3E3E3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F2F2F2, #E3E3E3); /* Standard syntax (must be last) */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+form input[type=submit]:hover{
+    border: 1px solid #777777;
+}
+
+.reseter{
+    text-align: right;
+    padding: 2px;
+}
+.reseter a{
+    font-size: 12px;
+    color: #005580;
+}

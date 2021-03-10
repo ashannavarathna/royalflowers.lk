@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 22, 2016 9:21:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.ProductHasVendors" table="product_has_vendors" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idproductHasVendors" type="java.lang.Integer">
+            <column name="idproduct_has_vendors" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="pojo.Product" fetch="select">
+            <column name="product_idproduct" not-null="true" />
+        </many-to-one>
+        <many-to-one name="productRequestStatus" class="pojo.ProductRequestStatus" fetch="select">
+            <column name="product_request_status_idproduct_request_status" not-null="true" />
+        </many-to-one>
+        <many-to-one name="vendors" class="pojo.Vendors" fetch="select">
+            <column name="vendors_idcompanies" not-null="true" />
+        </many-to-one>
+        <property name="requestQuantity" type="string">
+            <column name="request_quantity" length="45" />
+        </property>
+        <set name="productRequestReceipts" table="product_request_receipt" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_has_vendors_idproduct_has_vendors" not-null="true" />
+            </key>
+            <one-to-many class="pojo.ProductRequestReceipt" />
+        </set>
+    </class>
+</hibernate-mapping>

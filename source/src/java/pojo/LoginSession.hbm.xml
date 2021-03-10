@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.LoginSession" table="login_session" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idloginSession" type="java.lang.Integer">
+            <column name="idlogin_session" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userLogin" class="pojo.UserLogin" fetch="select">
+            <column name="iduser_login" not-null="true" />
+        </many-to-one>
+        <property name="inTime" type="timestamp">
+            <column name="in_time" length="19" />
+        </property>
+        <property name="outTime" type="timestamp">
+            <column name="out_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.CoverPhotos" table="cover_photos" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idcoverPhotos" type="java.lang.Integer">
+            <column name="idcover_photos" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="advertisingStatus" class="pojo.AdvertisingStatus" fetch="select">
+            <column name="advertising_status_idadvertising_status" not-null="true" />
+        </many-to-one>
+        <property name="code" type="string">
+            <column name="code" length="45" />
+        </property>
+        <property name="imgUrl" type="string">
+            <column name="img_url" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

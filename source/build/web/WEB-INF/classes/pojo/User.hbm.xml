@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.User" table="user" catalog="royal_flowers" optimistic-lock="version">
+        <id name="iduser" type="java.lang.Integer">
+            <column name="iduser" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="userGender" class="pojo.UserGender" fetch="select">
+            <column name="user_gender_idgender" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userState" class="pojo.UserState" fetch="select">
+            <column name="user_state_iduser_state" not-null="true" />
+        </many-to-one>
+        <many-to-one name="userType" class="pojo.UserType" fetch="select">
+            <column name="user_type_iduser_type" not-null="true" />
+        </many-to-one>
+        <property name="fname" type="string">
+            <column name="fname" length="100" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="100" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" />
+        </property>
+        <property name="telephone" type="string">
+            <column name="telephone" length="15" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile" length="15" />
+        </property>
+        <property name="address1" type="string">
+            <column name="address1" length="65535" />
+        </property>
+        <property name="address2" type="string">
+            <column name="address2" length="65535" />
+        </property>
+        <property name="address3" type="string">
+            <column name="address3" length="45" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" />
+        </property>
+        <property name="PCode" type="string">
+            <column name="p_code" length="100" />
+        </property>
+        <property name="district" type="string">
+            <column name="district" length="45" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="100" />
+        </property>
+        <property name="dob" type="timestamp">
+            <column name="dob" length="19" />
+        </property>
+        <set name="invoices" table="invoice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_iduser" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Invoice" />
+        </set>
+        <set name="carts" table="cart" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_iduser" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Cart" />
+        </set>
+        <set name="deliveries" table="delivery" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_iduser" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Delivery" />
+        </set>
+    </class>
+</hibernate-mapping>

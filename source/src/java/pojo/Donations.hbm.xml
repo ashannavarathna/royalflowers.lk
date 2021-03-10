@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Donations" table="donations" catalog="royal_flowers" optimistic-lock="version">
+        <id name="iddonations" type="java.lang.Integer">
+            <column name="iddonations" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="donationOrgs" class="pojo.DonationOrgs" fetch="select">
+            <column name="donation_orgs_iddonation_orgs" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="pojo.User" fetch="select">
+            <column name="user_iduser" not-null="true" />
+        </many-to-one>
+        <property name="amount" type="string">
+            <column name="amount" length="45" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+        <property name="reciptNum" type="string">
+            <column name="recipt_num" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

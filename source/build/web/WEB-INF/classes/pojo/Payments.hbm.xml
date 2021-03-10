@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Payments" table="payments" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idpayments" type="java.lang.Integer">
+            <column name="idpayments" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="paymentTypes" class="pojo.PaymentTypes" fetch="select">
+            <column name="payment_types_idpayment_types" not-null="true" />
+        </many-to-one>
+        <property name="tranactionCode" type="string">
+            <column name="tranaction_code" length="45" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+        <property name="accNum" type="string">
+            <column name="acc_num" length="45" />
+        </property>
+        <property name="amount" type="java.lang.Double">
+            <column name="amount" precision="22" scale="0" />
+        </property>
+        <property name="reciptNum" type="string">
+            <column name="recipt_num" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

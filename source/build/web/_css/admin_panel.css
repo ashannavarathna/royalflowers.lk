@@ -1,0 +1,172 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 7, 2015, 10:50:02 PM
+    Author     : Ashna Nawarathna
+*/
+
+body{
+    margin: 0 auto;
+    padding: 0;
+    font-family: sans-serif;
+    /*font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;*/
+    background-color: #F4F4EE;
+}
+/* end of body*/
+
+/* end of top page content*/
+
+.top_text{
+    border-bottom: 1px solid #080808;
+    margin-bottom: 10px;
+    padding: 5px 5px 8px 5px;
+    width: 1285px;
+    font-size: 22px;
+    font-weight: bold;
+    /*    background-color: #3A4043;
+        border-radius: 5px;
+        color:#F4F4EE;*/
+
+}
+/* end of top text*/
+.main-wrapper{
+    width: 1285px;
+    margin: 10px auto;
+
+}
+/* title bar */
+.top_title_bar{
+    background-color: #3A4043;
+    height: 20px;
+    border-radius: 3px 3px 0 0;
+    font-size: 12px;
+    font-weight: bolder;
+    padding: 8px 5px 3px 5px;
+
+}
+/* end of title bar*/
+.left_container{
+    width: 260px;
+    float: left;
+
+}
+.left-wrapper{
+    width: 260px;
+    /*border: 1px solid #333;*/
+    height: auto;
+    color: #FFF;
+    border-radius: 3px;
+    background-color: #FFF;
+    
+
+
+}
+.left-wrapper .top_title_bar{
+    color: wheat;
+}
+.left-wrapper .left_side_nav ul li .left_link{
+    margin-left: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.left-wrapper .left_side_nav ul li{
+    color: #444;
+    cursor: default;
+}
+.left-wrapper .left_side_nav ul lihover{
+    color: #000;
+}
+.left-wrapper .left_side_nav ul li{
+    display: block;
+    padding: 10px 5px 8px 10px;
+    border-bottom: 1px #D6D8D9 solid;
+    list-style: none;
+
+}
+.left-wrapper .left_side_nav ul li:hover{
+    background-color: #FAFAE9;
+}
+.left-wrapper .left_side_nav{
+    margin-left: -40px;
+    margin-top: -15px;
+}
+/* end of left top */
+.quick_access_wrapper{
+    width: 260px;
+    float: left;
+    /*border: 1px solid #333;*/
+    color: #FFF;
+    border-radius: 3px;
+    background-color: #FFF;
+    margin-bottom: 10px;
+    padding: 0px  0 5px 0;
+}
+.quick_access_content .min_box_quick{
+    width: 70px;
+    height: 70px;
+    float: left;
+    border: 1px solid #D6D8D9;
+    padding: 5px;
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+.min_box_quick img{
+    margin-left: 15px;
+}
+.min_box_quick .mini_box_text{
+    font-size: 10px;
+    color: #000;
+    width: 100%;
+    text-align: center;
+}
+.min_box_quick:hover{
+    background-color: #F3F6F7;
+}
+/* end of quick acces */
+/* end of left container*/
+.center-warapper{
+    width: 1015px;
+    height: auto;/*change this value */
+    /*border: 1px solid #777;*/
+    color: #000;
+    float: left;
+    margin-left: 10px;
+    border-radius: 3px;
+    background-color: #FFF;
+    padding-bottom: 10px;
+}
+.center-warapper .top_title_bar{
+    width: 1005px;
+    color: #FFF;
+    font-weight: bold;
+}
+.center_content_dashb{
+    padding: 5px;
+    font-size: 13px;
+}
+/* end of center*/
+
+/*end product deatils*/
+.footer_wrapper{
+    clear: both;
+    background-color: #3A4043;
+    height: 250px;
+    margin-top: 10px;
+}
+.footer_list{
+    width: 1000px;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Product" table="product" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idproduct" type="java.lang.Integer">
+            <column name="idproduct" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="brand" class="pojo.Brand" fetch="select">
+            <column name="brand_idbrand" not-null="true" />
+        </many-to-one>
+        <many-to-one name="PStatus" class="pojo.PStatus" fetch="select">
+            <column name="p_status_idp_status" not-null="true" />
+        </many-to-one>
+        <many-to-one name="productColor" class="pojo.ProductColor" fetch="select">
+            <column name="product_color_idcolor" not-null="true" />
+        </many-to-one>
+        <many-to-one name="subCategory" class="pojo.SubCategory" fetch="select">
+            <column name="sub_category_idsub_category" not-null="true" />
+        </many-to-one>
+        <property name="productCode" type="string">
+            <column name="product_code" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="price" type="java.lang.Double">
+            <column name="price" precision="22" scale="0" />
+        </property>
+        <property name="discount" type="java.lang.Double">
+            <column name="discount" precision="22" scale="0" />
+        </property>
+        <property name="qty" type="java.lang.Integer">
+            <column name="qty" />
+        </property>
+        <property name="reoderLevel" type="java.lang.Integer">
+            <column name="reoder_level" />
+        </property>
+        <property name="weight" type="java.lang.Double">
+            <column name="weight" precision="22" scale="0" />
+        </property>
+        <property name="imageUrl1" type="string">
+            <column name="image_url_1" />
+        </property>
+        <property name="imageUrl2" type="string">
+            <column name="image_url_2" />
+        </property>
+        <property name="imageUrl3" type="string">
+            <column name="image_url_3" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="65535" />
+        </property>
+        <property name="regDate" type="timestamp">
+            <column name="reg_date" length="19" />
+        </property>
+        <set name="cartHasProductses" table="cart_has_products" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="product_idproduct" not-null="true" />
+            </key>
+            <one-to-many class="pojo.CartHasProducts" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 22, 2016 9:21:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.ProductRequestReceipt" table="product_request_receipt" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idproductRequestReceipt" type="java.lang.Integer">
+            <column name="idproduct_request_receipt" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="productHasVendors" class="pojo.ProductHasVendors" fetch="select">
+            <column name="product_has_vendors_idproduct_has_vendors" not-null="true" />
+        </many-to-one>
+        <property name="receiptNo" type="string">
+            <column name="receipt_no" length="120" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

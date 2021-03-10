@@ -1,0 +1,22 @@
+SMAP
+manage_005fadd_jsp.java
+JSP
+*S JSP
+*F
++ 0 manage_add.jsp
+_admin_pages/advertisement/manage_add.jsp
+*L
+1,10:47
+12,8:59
+19,18:67
+39:88,2
+40:90
+41:91,3
+42:94,5
+43,3:99,3
+46,2:108
+48,2:111
+49,11:113
+60,2:125
+61,66:127
+*E

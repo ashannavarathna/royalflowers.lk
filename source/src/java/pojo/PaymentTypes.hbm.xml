@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.PaymentTypes" table="payment_types" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idpaymentTypes" type="java.lang.Integer">
+            <column name="idpayment_types" />
+            <generator class="identity" />
+        </id>
+        <property name="type" type="string">
+            <column name="type" length="45" />
+        </property>
+        <set name="paymentses" table="payments" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="payment_types_idpayment_types" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Payments" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/royal_flowers?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">mysQl55</property>
+    <mapping resource="pojo/UserType.hbm.xml"/>
+    <mapping resource="pojo/LoginSession.hbm.xml"/>
+    <mapping resource="pojo/EmailCode.hbm.xml"/>
+    <mapping resource="pojo/SubCategory.hbm.xml"/>
+    <mapping resource="pojo/UserGender.hbm.xml"/>
+    <mapping resource="pojo/AdvertisingLocation.hbm.xml"/>
+    <mapping resource="pojo/Privilages.hbm.xml"/>
+    <mapping resource="pojo/Product.hbm.xml"/>
+    <mapping resource="pojo/CartHasProducts.hbm.xml"/>
+    <mapping resource="pojo/Brand.hbm.xml"/>
+    <mapping resource="pojo/Advertising.hbm.xml"/>
+    <mapping resource="pojo/Catagory.hbm.xml"/>
+    <mapping resource="pojo/PStatus.hbm.xml"/>
+    <mapping resource="pojo/Delivery.hbm.xml"/>
+    <mapping resource="pojo/AdvertisingCategory.hbm.xml"/>
+    <mapping resource="pojo/User.hbm.xml"/>
+    <mapping resource="pojo/Vendors.hbm.xml"/>
+    <mapping resource="pojo/ProductRequestReceipt.hbm.xml"/>
+    <mapping resource="pojo/DeliveryPlan.hbm.xml"/>
+    <mapping resource="pojo/CoverPhotos.hbm.xml"/>
+    <mapping resource="pojo/ProductColor.hbm.xml"/>
+    <mapping resource="pojo/Interfaces.hbm.xml"/>
+    <mapping resource="pojo/AdvertisingStatus.hbm.xml"/>
+    <mapping resource="pojo/PVotes.hbm.xml"/>
+    <mapping resource="pojo/ProductRequestStatus.hbm.xml"/>
+    <mapping resource="pojo/Company.hbm.xml"/>
+    <mapping resource="pojo/ProductHasVendors.hbm.xml"/>
+    <mapping resource="pojo/PaymentTypes.hbm.xml"/>
+    <mapping resource="pojo/UserLogin.hbm.xml"/>
+    <mapping resource="pojo/Cart.hbm.xml"/>
+    <mapping resource="pojo/Donations.hbm.xml"/>
+    <mapping resource="pojo/ProductRating.hbm.xml"/>
+    <mapping resource="pojo/Payments.hbm.xml"/>
+    <mapping resource="pojo/AdvertisingDatePlans.hbm.xml"/>
+    <mapping resource="pojo/UserState.hbm.xml"/>
+    <mapping resource="pojo/Invoice.hbm.xml"/>
+    <mapping resource="pojo/DonationOrgs.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

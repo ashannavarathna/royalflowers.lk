@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="royal_flowers" name="pojo.Advertising" optimistic-lock="version" table="advertising">
+    <id name="idadvertising" type="java.lang.Integer">
+      <column name="idadvertising"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="pojo.AdvertisingCategory" fetch="select" name="advertisingCategory">
+      <column name="advertising_category_idadvertising_category" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="pojo.AdvertisingDatePlans" fetch="select" name="advertisingDatePlans">
+      <column name="advertising_date_plans_idadvertising_date_plans" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="pojo.AdvertisingLocation" fetch="select" name="advertisingLocation">
+      <column name="advertising_location_idadvertising_location" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="pojo.AdvertisingStatus" fetch="select" name="advertisingStatus">
+      <column name="advertising_status_idadvertising_status" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="pojo.User" fetch="select" name="user">
+      <column name="user_iduser" not-null="true"/>
+    </many-to-one>
+    <property name="addTitle" type="string">
+      <column length="100" name="add_title"/>
+    </property>
+    <property name="onDate" type="timestamp">
+      <column length="19" name="on_date"/>
+    </property>
+    <property name="description" type="string">
+      <column length="255" name="description"/>
+    </property>
+    <property name="imgUrl" type="string">
+      <column length="45" name="img_url"/>
+    </property>
+    <property name="websiteUrl" type="string">
+      <column length="150" name="website_url"/>
+    </property>
+  </class>
+</hibernate-mapping>

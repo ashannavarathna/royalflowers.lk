@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Company" table="company" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idcompanies" type="java.lang.Integer">
+            <column name="idcompanies" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="bizType" type="string">
+            <column name="biz_type" length="45" />
+        </property>
+        <property name="websiteUrl" type="string">
+            <column name="website_url" length="45" />
+        </property>
+    </class>
+</hibernate-mapping>

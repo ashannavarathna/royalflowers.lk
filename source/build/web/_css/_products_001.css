@@ -1,0 +1,214 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 15, 2015, 10:48:18 AM
+    Author     : Ashna Nawarathna
+*/
+/*product page */
+.products_wrapper{
+    width: 1000px;
+    /*border: 1px solid #CCC;*/
+    height: auto;
+    margin-bottom: 20px;
+    float: left;
+}
+.products_left_nav{
+    width: 280px;
+    height: 570px;
+    border: 1px solid #CCC;
+    /*background-color: #FFF;*/
+    float: left;
+}
+.products_left_nav select{
+    padding: 3px;
+    width: 240px;
+    margin-top: 5px;
+    margin-left: 20px;
+    border: 1px solid #CCC;
+        
+}
+.products_left_nav label{
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#p_n_head{
+    padding: 5px 0;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.products_left_nav input[type=submit]{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 240px;
+    padding: 5px 5px;
+}
+.products_left_nav select option{
+    padding: 2px;
+}
+.products_center_container{
+    width: 700px;
+    border: 1px solid #CCC;
+    float: right;
+    height: auto;
+}
+/* end of product */
+
+/* cart page */
+
+.shopping_cart_wrapper{
+    width: 900px;
+    /*border: 1px solid #CCC;*/
+    background-color: #FFF;
+    /*height: 750px;*/
+    padding: 10px 5px;
+    float: left;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px -3px #777;
+}
+.cart_table{
+    border: 1px solid #dff0d8;
+    width: 600px;
+    margin:0 0 10px 20px ;
+    /*padding: 10px;*/
+    font-size: 13px;
+}
+.cart_table table tr{
+
+}
+.cart_table table{
+    width: 600px;
+}
+.cart_table table td{
+    //border: 1px solid #CCC;
+    text-align: center;
+
+}
+.cart_table tr td input[type=text]{
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+#crt-item-name{
+    width: 300px;
+}
+#crt-tbl-headrw {
+    background-color: #777;
+    color: #FFF;
+
+}
+#crt-tbl-headrw td{
+    padding: 5px 0;
+}
+.cont{
+    //border: 1px solid #CCC;
+}
+.crt-item-divider{
+    border-bottom: 1px solid #DDD;
+}
+.cart-remove-bt {
+    width: 50px;
+    margin-top: 2px;
+}
+.cart-remove-bt a{
+    font-size: 12px;
+    color: #555;
+}
+#cart-pro-name{
+    text-align: justify;
+    padding-left: 5px;
+}
+
+/* end of cart */
+
+/*start right*/
+
+.cart_payment_content{
+    width: 500px;
+    height: 200px;
+    border: 1px solid #CCC;
+    margin-top: 10px;
+    margin-left: 120px;
+
+}
+.c_payment_title{
+    background-color: #3A4043;
+    padding: 3px 5px 5px 5px;
+    color: #FFF;
+
+}
+.c_payment_title .t-text{
+    margin-top: 5px;
+}
+
+.c_payment{
+    padding: 5px;
+    border-bottom: 1px solid #F4F4EE;
+}
+.c_payment .p_tag{
+    /*border: 1px solid #999;*/
+    padding: 5px;
+    display: inline-block;
+    width: 100px;
+
+}
+.c_payment .p_total{
+    display: inline-block;
+
+    float: right;
+    /*border: 1px solid #999;*/
+    width: 200px;
+    text-align: right;
+    padding: 5px;
+    color: #0055cc;
+}
+.checkout-btn{
+    float: right;
+    margin-right: 5px;
+    height: 33px;
+    text-align: center;
+    border-radius: 3px;
+    cursor: default;
+    margin-top: 10px;
+    width: 220px;  
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.checkout-btn a:link, .checkout-btn a:visited,
+.checkout-btn a:active{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    border: 1px solid #CCC;
+    padding: 8px 5px;
+    border-radius: 3px;
+    cursor: default;
+
+}
+.checkout-btn:hover{
+    background-color: #3A4043;
+    color: #FFF;
+}
+.wish:hover{
+    background-color: #777;
+    color: #FFF;
+}
+.payment_msg{
+    font-size: 14px;
+    /*border: 1px solid #dff0d8;*/
+    clear: both;
+    height: 20px;
+    padding: 5px;
+    margin: 0 5px;
+    color:  #555;
+    font-size: 10px;
+}

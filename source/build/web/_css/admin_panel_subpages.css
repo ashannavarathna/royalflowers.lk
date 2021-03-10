@@ -1,0 +1,161 @@
+.page_menu{
+    padding:0;
+    //border: 1px solid #000;
+}
+.page_menu ul{
+    margin-left: 0;
+    left: 0;
+    margin-top: 5px;
+    padding:0 2px 0 0;
+    margin-bottom: 0;
+}
+.page_menu ul li{
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    border:1px solid #CCC;
+    border-bottom: none;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+.page_menu ul li:hover{
+    background: -webkit-linear-gradient(#F2F2F2, #E3E3E3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F2F2F2, #E3E3E3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F2F2F2, #E3E3E3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F2F2F2, #E3E3E3); /* Standard syntax (must be last) */
+}
+.page-display{
+    height: auto;
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+
+
+/*sub page --  save product and product detaisl*/
+.save-product-content{
+    font-size: 12px;
+    /*border: 1px solid #777;*/
+    padding: 5px;
+}
+
+.save-product-content .savepro-select{
+    width: 297px;
+    padding: 5px 3px;
+    /*font-family: monospace;*/
+    border: 1px solid #CCC;
+
+}
+.save-product-content .savepro-select-spec{
+    width: 380px;
+    padding: 5px 5px;
+}
+.save-product-content input[type="text"]{
+    width: 290px;
+    padding: 5px 3px;
+    /*font-family: monospace;*/
+    border: 1px solid #CCC;
+
+}
+
+.save-product-content .input_num_val input[type=text]{
+    width: 100px;
+    text-align: right;
+}
+.save-product-content input[type="submit"]{
+    width: 150px;
+    padding: 5px 3px;
+    border: 1px solid #BBB;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#F2F2F2, #E3E3E3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F2F2F2, #E3E3E3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F2F2F2, #E3E3E3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F2F2F2, #E3E3E3); /* Standard syntax (must be last) */
+
+}
+
+.save-product-content input[type="submit"]:hover{
+    border: 1px solid #777;
+}
+
+.sp_pro_left{
+    float: left;
+    margin-right: 10px;
+}
+.sp_pro_mid{
+    width: 900px;
+    border: 1px solid #000;
+    position: relative;
+
+}
+
+/*save pro category*/
+.save-product-category-content .sub_container_sp_mini{
+    padding: 5px;
+    border: 1px solid #CCC;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 160px;
+}
+.sub_container_sp_mini{
+    float: left;
+    margin-left: 10px;
+}
+.sub_cont_header{
+    font-size: 12px;
+    /*border-bottom: 1px solid #BBB;*/
+    margin-bottom: 5px;
+    background-color: #1a1a1a;
+    color: #FFF;
+    padding: 5px;
+    
+}
+.sub_cont_body label, .sub_cont_body input[type=text]{
+    display: block;
+    margin-bottom: 5px;
+    width: 280px;
+    padding:5px; 
+}
+.sub_cont_body input[type=submit]{
+    width: 100px;
+}
+
+
+/* end of save prodcut */
+
+
+.table-container-viewlist table{
+    border: 1px solid #CCC;
+    width: 2000px;
+
+}
+.table-container-viewlist table th {
+    background-color: #555;
+    color: #FFF;
+}
+.table-container-viewlist table td{
+    background-color: #CCC;
+}
+.sub_cont_body select{
+    padding: 3px 3px;
+    font-size: 12px;
+}
+.error_msg{
+    font-size: 11px;
+}
+
+.default-button{
+    padding: 3px 3px;
+    border: 1px solid #BBB;
+    background: -webkit-linear-gradient(#F2F2F2, #E3E3E3); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#F2F2F2, #E3E3E3); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#F2F2F2, #E3E3E3); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#F2F2F2, #E3E3E3); /* Standard syntax (must be last) */
+}
+.default-button:hover{
+    border: 1px solid #777;
+}
+
+
+
+
+

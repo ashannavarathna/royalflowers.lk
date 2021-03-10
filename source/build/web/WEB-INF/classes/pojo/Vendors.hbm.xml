@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 22, 2016 9:21:58 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.Vendors" table="vendors" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idcompanies" type="java.lang.Integer">
+            <column name="idcompanies" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="websiteUrl" type="string">
+            <column name="website_url" length="45" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" />
+        </property>
+        <property name="cnt1" type="string">
+            <column name="cnt1" length="45" />
+        </property>
+        <property name="cnt2" type="string">
+            <column name="cnt2" length="45" />
+        </property>
+        <set name="productHasVendorses" table="product_has_vendors" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="vendors_idcompanies" not-null="true" />
+            </key>
+            <one-to-many class="pojo.ProductHasVendors" />
+        </set>
+    </class>
+</hibernate-mapping>

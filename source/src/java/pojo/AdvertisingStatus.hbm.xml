@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 10, 2016 2:36:54 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.AdvertisingStatus" table="advertising_status" catalog="royal_flowers" optimistic-lock="version">
+        <id name="idadvertisingStatus" type="java.lang.Integer">
+            <column name="idadvertising_status" />
+            <generator class="identity" />
+        </id>
+        <property name="status" type="string">
+            <column name="status" length="45" />
+        </property>
+        <set name="advertisingDatePlanses" table="advertising_date_plans" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertising_status_idadvertising_status" not-null="true" />
+            </key>
+            <one-to-many class="pojo.AdvertisingDatePlans" />
+        </set>
+        <set name="advertisingCategories" table="advertising_category" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertising_status_idadvertising_status" not-null="true" />
+            </key>
+            <one-to-many class="pojo.AdvertisingCategory" />
+        </set>
+        <set name="coverPhotoses" table="cover_photos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertising_status_idadvertising_status" not-null="true" />
+            </key>
+            <one-to-many class="pojo.CoverPhotos" />
+        </set>
+        <set name="advertisings" table="advertising" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="advertising_status_idadvertising_status" not-null="true" />
+            </key>
+            <one-to-many class="pojo.Advertising" />
+        </set>
+    </class>
+</hibernate-mapping>

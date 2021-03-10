@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 23, 2016 3:21:11 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojo.UserState" table="user_state" catalog="royal_flowers" optimistic-lock="version">
+        <id name="iduserState" type="java.lang.Integer">
+            <column name="iduser_state" />
+            <generator class="identity" />
+        </id>
+        <property name="state" type="string">
+            <column name="state" length="45" />
+        </property>
+        <set name="users" table="user" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_state_iduser_state" not-null="true" />
+            </key>
+            <one-to-many class="pojo.User" />
+        </set>
+    </class>
+</hibernate-mapping>
